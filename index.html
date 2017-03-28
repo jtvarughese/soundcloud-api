@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="soundcloud.css">
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script src="https://use.fontawesome.com/9d4bd1914c.js"></script>
+    <title>Jukebox</title>
+  </head>
+  <body>
+    <!-- the navigation menu -->
+    <nav id="navbar">
+      <div>
+        <i class="fa fa-superpowers" aria-hidden="true"></i>
+        <span>
+          <a href="about.html" class="nav-links">about</a>
+        </span>
+        <span>
+          <a href="contact.html" class="nav-links">contact us</a>
+        </span>
+        <p id="nav-para">Powered by SoundCloud <i class="fa fa-soundcloud" aria-hidden="true"></i></p>
+      </div>
+    </nav>
+
+    <div>
+      <h1>.soundwave</h1>
+    </div>
+
+    <div><a href="" id="songTitle"></a></div>
+    <div><a href="" id="artist"></a></div>
+    <div><img src="" id="coverArt"></div>
+    <div id="releaseDate"></div>
+    <div id="genre"></div>
+
+    <span id="audiobuttons">
+      <a href="#" id="prev"><i class="fa fa-backward" aria-hidden=”true”></i></a>
+      <a href="#" id="stop"><i class="fa fa-stop-circle" aria-hidden=”true”></i></a>
+      <a href="#" id="play"><i class="fa fa-play-circle" aria-hidden="true"></i></a>
+      <a href="#" id="pause"><i class="fa fa-pause-circle" aria-hidden=”true”></i></a>
+      <a href="#" id="forward"><i class="fa fa-forward" aria-hidden=”true”></i></a>
+    </span>
+    <!-- tne alternate play and stop controls -->
+    <!-- <span id="altAudioButtons">
+      <a href="#" id="alt-play"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+      <a href="#" id="alt-stop"><i class="fa fa-ban" aria-hidden="true"></i></a>
+    </span> -->
+
+    <script type="text/javascript" src="soundcloud.js"></script>
+  </body>
+</html>
