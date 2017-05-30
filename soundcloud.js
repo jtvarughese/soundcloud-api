@@ -2,8 +2,8 @@
 
 var play=document.querySelector("#play")
 var pause=document.querySelector("#pause")
-var cover=document.querySelector("#cover")
-var titleGo=document.querySelector("#title")
+var cover=document.querySelector("#coverArt")
+var titleGo=document.querySelector("#songTitle")
 var artistGo=document.querySelector("#artist")
 
 SC.initialize({
@@ -30,25 +30,23 @@ SC.stream('track').then(function(player){
 // defines the Jukebox prototype object
 Jukebox.prototype.play = function(){
   this.player.then(function(response){
-    jukebox.play();
+  response.play();
   })
 }
 
 Jukebox.prototype.pause = function(){
   this.player.then(function(response){
-    jukebox.pause();
+    response.pause();
   })
 }
 // targets the play button from the page and
 // stores a reference to it in the playButton variable
 // this play button has global scope
-var playButton=document.querySelector("#play")
-var pauseButton=document.querySelector("#pause")
 
 
 // adds an event listener for when you click the play button
 // preventDefault prevents anchor tag going to next page
-playButton.addEventListener("click", function(event){
+play.addEventListener("click", function(event){
   event.preventDefault();
   jukebox.play()
   SC.get("/tracks/39646304").then(function(response){
@@ -64,20 +62,20 @@ playButton.addEventListener("click", function(event){
   });
 })
 
-pauseButton.addEventListener("click", function(event){
+pause.addEventListener("click", function(event){
   event.preventDefault();
   jukebox.pause()
 })
 
 
-Jukebox.prototype.forward = function(){
-  i++;
-  music.pause();
-
-  if (i === jukebox.list.length) {
-    i = 0
-  };
-
-  music.src = jukebox.list[i];
-  music.play()
-}
+// Jukebox.prototype.forward = function(){
+//   i++;
+//   music.pause();
+//
+//   if (i === jukebox.list.length) {
+//     i = 0
+//   };
+//
+//   music.src = jukebox.list[i];
+//   music.play()
+// }
